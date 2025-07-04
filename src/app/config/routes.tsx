@@ -5,6 +5,7 @@ import { PineapplePage } from "../../pages/ui/subpages/PineapplePage.tsx";
 import { StartPage } from "../../pages/ui/subpages/StartPage.tsx";
 import { ShowPage } from "../../pages/ui/subpages/ShowPage.tsx";
 import { EightballPage } from "../../pages/ui/subpages/EightballPage.tsx";
+import { FinalPage } from "../../pages/ui/FinalPage.tsx";
 
 export const routes: RouteObject[] = [
   {
@@ -33,6 +34,10 @@ export const routes: RouteObject[] = [
       {
         path: "pineapple",
         element: <PineapplePage />,
+      },
+      {
+        path: "/final",
+        element: <FinalPage />,
       },
     ],
   },

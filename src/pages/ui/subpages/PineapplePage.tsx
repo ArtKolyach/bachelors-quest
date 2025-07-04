@@ -10,6 +10,7 @@ export const PineapplePage = () => {
       answer={"Буржуй"}
       image={hat}
       correctText={"Так точно!"}
+      to={"/final"}
     />
   );
 };
