@@ -1,5 +1,5 @@
-import { QuestPage } from "./QuestPage.tsx";
-import origami from "../../assets/origami.png";
+import { QuestPage } from "../QuestPage.tsx";
+import origami from "../../../assets/origami.png";
 
 export const PaperPlane = () => {
   return (

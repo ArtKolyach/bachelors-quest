@@ -1,6 +1,7 @@
 import { Navigate, type RouteObject } from "react-router";
-import { PaperPlane } from "../../pages/ui/PaperPlane.tsx";
-import { PoolPage } from "../../pages/ui/PoolPage.tsx";
+import { PaperPlane } from "../../pages/ui/subpages/PaperPlane.tsx";
+import { PoolPage } from "../../pages/ui/subpages/PoolPage.tsx";
+import { PineapplePage } from "../../pages/ui/subpages/PineapplePage.tsx";
 
 export const routes: RouteObject[] = [
   {
@@ -17,6 +18,10 @@ export const routes: RouteObject[] = [
       {
         path: "deeper",
         element: <PoolPage />,
+      },
+      {
+        path: "pineapple",
+        element: <PineapplePage />,
       },
     ],
   },

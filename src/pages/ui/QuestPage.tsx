@@ -17,6 +17,7 @@ type Props = {
 
 export const QuestPage = ({
   title,
+  question,
   answer,
   image,
   to,
@@ -62,7 +63,9 @@ export const QuestPage = ({
         >
           {title}
         </Typography.Title>
-        <Typography.Text>Найди и вбей заветное слово</Typography.Text>
+        <Typography.Text>
+          {question ?? "Найди и вбей заветное слово"}
+        </Typography.Text>
         <Flex gap={5}>
           <Input
             disabled={passed}
