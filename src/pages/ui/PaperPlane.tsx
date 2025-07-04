@@ -1,13 +1,13 @@
-import { TrophyOutlined } from "@ant-design/icons";
 import { QuestPage } from "./QuestPage.tsx";
+import origami from "../../assets/origami.png";
 
 export const PaperPlane = () => {
   return (
     <QuestPage
-      icon={<TrophyOutlined />}
-      question={"Вань, ты дурак совсем?"}
+      image={origami}
+      title={"Знания из колледжа всё-таки пригодятся?.."}
       answer={"Лети"}
-      to={"/pool"}
+      to={"/deeper"}
       backgroundColor={"#ffba5f"}
     />
   );

@@ -1,22 +1,28 @@
 import { Flex, Input, Typography, Button, message } from "antd";
 import { SendOutlined } from "@ant-design/icons";
-import { type JSX, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
+import styles from "./QuestPage.module.css";
 
 type Props = {
   backgroundColor: string;
-  question: string;
+  title: string;
+  question?: string;
   answer: string;
-  icon: JSX.Element;
+  image: string;
   to?: string;
+  correctText?: string;
+  incorrectText?: string;
 };
 
 export const QuestPage = ({
-  question,
+  title,
   answer,
-  icon,
+  image,
   to,
   backgroundColor,
+  correctText,
+  incorrectText,
 }: Props) => {
   const [value, setValue] = useState("");
   const [messageApi, contextHolder] = message.useMessage();
@@ -24,10 +30,10 @@ export const QuestPage = ({
 
   const handleSend = () => {
     if (value.trim().toLowerCase() === answer.toLowerCase()) {
-      messageApi.success("Правильно! 🎉");
+      messageApi.success(correctText ?? "Правильно! 🎉");
       setPassed(true);
     } else {
-      messageApi.error("Неправильно, попробуй ещё раз :(");
+      messageApi.error(incorrectText ?? "Неправильно, попробуй ещё раз :(");
       setValue("");
     }
   };
@@ -47,10 +53,16 @@ export const QuestPage = ({
         justify={"start"}
         align={"center"}
         gap={10}
-        style={{ marginTop: "30%", width: "100%" }}
+        style={{ marginTop: "100px", width: "100%", padding: "0 10px" }}
       >
-        {icon}
-        <Typography.Text>{question}</Typography.Text>
+        <img className={styles.image} src={image as string} alt="alt" />
+        <Typography.Title
+          level={5}
+          style={{ textAlign: "center", fontWeight: "bold" }}
+        >
+          {title}
+        </Typography.Title>
+        <Typography.Text>Найди и вбей заветное слово</Typography.Text>
         <Flex gap={5}>
           <Input
             disabled={passed}
@@ -66,7 +78,7 @@ export const QuestPage = ({
         </Flex>
         {to && (
           <Link hidden={!passed} to={to}>
-            <Button type="primary">Далее</Button>
+            <Button type="primary">Дальше</Button>
           </Link>
         )}
       </Flex>

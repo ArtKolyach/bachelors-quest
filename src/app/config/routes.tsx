@@ -8,14 +8,14 @@ export const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <Navigate to={"paper-plane"} />,
+        element: <Navigate to={"paper"} />,
       },
       {
-        path: "paper-plane?",
+        path: "paper",
         element: <PaperPlane />,
       },
       {
-        path: "pool",
+        path: "deeper",
         element: <PoolPage />,
       },
     ],

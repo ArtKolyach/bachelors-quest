@@ -1,13 +1,15 @@
-import { TrophyOutlined } from "@ant-design/icons";
 import { QuestPage } from "./QuestPage.tsx";
+import tidehunter from "../../assets/tidehunter.png";
 
 export const PoolPage = () => {
   return (
     <QuestPage
-      question={"А?"}
-      icon={<TrophyOutlined />}
-      answer={"Плыви"}
-      backgroundColor={"#bbff90"}
+      title={"Копнём глубже"}
+      image={tidehunter}
+      answer={"ММР"}
+      backgroundColor={"#90ffbc"}
+      correctText={"Я хочу тебя типнуть!"}
+      incorrectText={"Ты новичок?"}
     />
   );
 };
