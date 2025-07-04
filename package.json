@@ -1,7 +1,7 @@
 {
   "name": "bachelors-party",
   "private": true,
-  "homepage": "https://ArtKolyach.github.io/bachelors-quest/",
+  "homepage": "https://ArtKolyach.github.io/bachelors-quest",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
