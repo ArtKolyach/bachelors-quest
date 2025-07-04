@@ -63,7 +63,7 @@ export const QuestPage = ({
         >
           {title}
         </Typography.Title>
-        <Typography.Text>
+        <Typography.Text style={{ textAlign: "center" }}>
           {question ?? "Найди и вбей заветное слово"}
         </Typography.Text>
         <Flex gap={5}>

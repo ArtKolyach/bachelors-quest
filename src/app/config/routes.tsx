@@ -3,6 +3,8 @@ import { PaperPlane } from "../../pages/ui/subpages/PaperPlane.tsx";
 import { PoolPage } from "../../pages/ui/subpages/PoolPage.tsx";
 import { PineapplePage } from "../../pages/ui/subpages/PineapplePage.tsx";
 import { StartPage } from "../../pages/ui/subpages/StartPage.tsx";
+import { ShowPage } from "../../pages/ui/subpages/ShowPage.tsx";
+import { EightballPage } from "../../pages/ui/subpages/EightballPage.tsx";
 
 export const routes: RouteObject[] = [
   {
@@ -11,6 +13,14 @@ export const routes: RouteObject[] = [
       {
         index: true,
         element: <StartPage />,
+      },
+      {
+        path: "show",
+        element: <ShowPage />,
+      },
+      {
+        path: "next",
+        element: <EightballPage />,
       },
       {
         path: "paper",

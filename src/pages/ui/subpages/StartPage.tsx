@@ -9,7 +9,7 @@ export const StartPage = () => {
       question={"Введи место, в которое мы приедем"}
       answer={"Картинг"}
       image={boxPng}
-      to={"/paper"}
+      to={"/show"}
       correctText={"Я-ху!"}
     />
   );
