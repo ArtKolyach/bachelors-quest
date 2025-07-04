@@ -1,4 +1,4 @@
-import { Navigate, type RouteObject } from "react-router";
+import { type RouteObject } from "react-router";
 import { PaperPlane } from "../../pages/ui/subpages/PaperPlane.tsx";
 import { PoolPage } from "../../pages/ui/subpages/PoolPage.tsx";
 import { PineapplePage } from "../../pages/ui/subpages/PineapplePage.tsx";
