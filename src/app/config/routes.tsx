@@ -1,6 +1,6 @@
-import { QuestPage } from "../../pages/ui/QuestPage";
 import { Navigate, type RouteObject } from "react-router";
-import { TrophyOutlined } from "@ant-design/icons";
+import { PaperPlane } from "../../pages/ui/PaperPlane.tsx";
+import { PoolPage } from "../../pages/ui/PoolPage.tsx";
 
 export const routes: RouteObject[] = [
   {
@@ -12,26 +12,11 @@ export const routes: RouteObject[] = [
       },
       {
         path: "paper-plane?",
-        element: (
-          <QuestPage
-            icon={<TrophyOutlined />}
-            question={"Вань, ты дурак совсем?"}
-            answer={"Лети"}
-            to={"/pool"}
-            backgroundColor={"#ffba5f"}
-          />
-        ),
+        element: <PaperPlane />,
       },
       {
         path: "pool",
-        element: (
-          <QuestPage
-            question={"А?"}
-            icon={<TrophyOutlined />}
-            answer={"Плыви"}
-            backgroundColor={"#bbff90"}
-          />
-        ),
+        element: <PoolPage />,
       },
     ],
   },
