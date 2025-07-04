@@ -2,6 +2,7 @@ import { Navigate, type RouteObject } from "react-router";
 import { PaperPlane } from "../../pages/ui/subpages/PaperPlane.tsx";
 import { PoolPage } from "../../pages/ui/subpages/PoolPage.tsx";
 import { PineapplePage } from "../../pages/ui/subpages/PineapplePage.tsx";
+import { StartPage } from "../../pages/ui/subpages/StartPage.tsx";
 
 export const routes: RouteObject[] = [
   {
@@ -9,7 +10,7 @@ export const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <Navigate to={"paper"} />,
+        element: <StartPage />,
       },
       {
         path: "paper",

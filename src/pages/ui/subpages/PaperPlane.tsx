@@ -8,7 +8,7 @@ export const PaperPlane = () => {
       title={"Знания из колледжа всё-таки пригодятся?.."}
       answer={"Лети"}
       to={"/deeper"}
-      backgroundColor={"#ffba5f"}
+      backgroundColor={"#dddddd"}
     />
   );
 };
