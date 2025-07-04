@@ -12,7 +12,7 @@ export const FinalPage = () => {
         width: "100%",
         height: "100%",
         display: "flex",
-        paddingTop: 50,
+        paddingTop: 20,
       }}
     >
       <Typography.Text className={styles.title}>День твой</Typography.Text>

@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import styles from "./QuestPage.module.css";
 
 type Props = {
-  backgroundColor: string;
+  backgroundColor?: string;
   title: string;
   question?: string;
   answer: string;
@@ -13,6 +13,7 @@ type Props = {
   to?: string;
   correctText?: string;
   incorrectText?: string;
+  classname?: string;
 };
 
 export const QuestPage = ({
@@ -24,6 +25,7 @@ export const QuestPage = ({
   backgroundColor,
   correctText,
   incorrectText,
+  classname,
 }: Props) => {
   const [value, setValue] = useState("");
   const [messageApi, contextHolder] = message.useMessage();
@@ -41,6 +43,7 @@ export const QuestPage = ({
 
   return (
     <Flex
+      className={classname}
       style={{
         background: backgroundColor,
         width: "100%",
