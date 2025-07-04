@@ -1,11 +1,15 @@
 import { QuestPage } from "../../pages/ui/QuestPage";
-import type { RouteObject } from "react-router";
+import { Navigate, type RouteObject } from "react-router";
 import { TrophyOutlined } from "@ant-design/icons";
 
 export const routes: RouteObject[] = [
   {
     path: "/",
     children: [
+      {
+        index: true,
+        element: <Navigate to={"paper-pane"} />,
+      },
       {
         path: "paper-plane?",
         element: (

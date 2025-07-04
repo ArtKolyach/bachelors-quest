@@ -2,11 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { App } from "./App.tsx";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createHashRouter, RouterProvider } from "react-router";
 import { ConfigProvider } from "antd";
 import { antdTheme } from "./app/ui/antdTheme";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/*",
     Component: App,
@@ -18,5 +18,5 @@ createRoot(document.getElementById("root")!).render(
     <ConfigProvider theme={antdTheme}>
       <RouterProvider router={router} />
     </ConfigProvider>
-  </StrictMode>
+  </StrictMode>,
 );
